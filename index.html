@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round Table Boksburg 17</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- ======================================================
+   TOP NAVIGATION
+====================================================== -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+
+    <div class="brand-mini">
+      <span class="dot"></span>
+      RTB17
+    </div>
+
+    <!-- Desktop breadcrumb navigation -->
+    <nav class="crumbs">
+      <button class="crumb active" data-open="home">Home</button>
+      <span class="sep">›</span>
+      <button class="crumb" data-open="members">Members</button>
+      <span class="sep">›</span>
+      <button class="crumb" data-open="projects">Projects</button>
+      <span class="sep">›</span>
+      <button class="crumb" data-open="contact">Contact</button>
+      <span class="sep">›</span>
+      <button class="crumb" data-open="social">Social</button>
+      <span class="sep">›</span>
+      <button class="crumb" data-open="gallery">Gallery</button>
+      <span class="sep">›</span>
+      <button class="crumb" data-open="about">About</button>
+    </nav>
+
+    <button id="menuBtn" class="menu-btn">☰</button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="mobile-menu" hidden>
+    <button data-open="home">Home</button>
+    <button data-open="members">Members</button>
+    <button data-open="projects">Projects</button>
+    <button data-open="contact">Contact</button>
+    <button data-open="social">Social</button>
+    <button data-open="gallery">Gallery</button>
+    <button data-open="about">About</button>
+  </div>
+</header>
+
+<!-- ======================================================
+   HOME PAGE
+====================================================== -->
+<main class="wrap">
+
+<section class="hero">
+
+  <div class="hero-card">
+
+    <div class="hero-logo">
+      <!-- CHANGE LOGO HERE -->
+      <img src="images/logo upscale-Photoroom.png" class="logo" alt="Round Table Boksburg 17">
+    </div>
+
+    <div class="hero-title">
+      <h1>ROUND TABLE</h1>
+      <h2>BOKSBURG 17</h2>
+      <p class="tagline">Adopt • Adapt • Improve</p>
+
+      <div class="quick-actions">
+        <button class="pill" data-open="members">Meet Members</button>
+        <button class="pill" data-open="projects">Projects</button>
+        <button class="pill" data-open="contact">Contact</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= CAROUSEL ================= -->
+  <section class="carousel">
+
+    <button id="prevBtn" class="nav">‹</button>
+
+    <div id="viewport" class="carousel-viewport">
+
+      <!-- ADD / REMOVE IMAGES HERE -->
+      <button class="tile"><img src="images/hooters photo.jpeg"></button>
+      <button class="tile"><img src="images/Meeting with maritius.jpeg"></button>
+      <button class="tile"><img src="images/agm casino.jpeg"></button>
+      <button class="tile"><img src="images/bokkie park market.jpeg"></button>
+      <button class="tile"><img src="images/museum.jpeg"></button>
+      <button class="tile"><img src="images/ARTSA.jpeg"></button>
+
+    </div>
+
+    <button id="nextBtn" class="nav">›</button>
+
+    <div id="dots" class="dots"></div>
+
+  </section>
+
+  <footer class="home-footer">
+    © <span id="year"></span> Round Table Boksburg 17
+  </footer>
+
+</section>
+</main>
+
+<!-- ======================================================
+   OVERLAY PANEL (DO NOT EDIT)
+====================================================== -->
+<div id="overlay" class="overlay">
+  <div class="panel">
+    <div class="panel-head">
+      <h3 id="panelTitle"></h3>
+      <button id="closeOverlay" class="close">✕</button>
+    </div>
+    <div id="panelBody" class="panel-body"></div>
+  </div>
+</div>
+
+<!-- ======================================================
+   LIGHTBOX (DO NOT EDIT)
+====================================================== -->
+<div id="lightbox" class="lightbox">
+  <button id="lbClose" class="lb-close">✕</button>
+  <img id="lbImg">
+  <div id="lbCaption"></div>
+</div>
+
+<!-- ======================================================
+   ⭐ MEMBERS SECTION (THIS IS WHERE YOU EDIT MEMBERS)
+   NON-CODERS ONLY NEED TO EDIT THIS BLOCK
+====================================================== -->
+<div id="membersContent" style="display:none;">
+
+<div class="grid">
+
+  <!-- ========= MEMBER CARD ========= -->
+  <article class="card">
+    <div class="card-img">
+      <!-- CHANGE PHOTO -->
+      <img class="mimg" src="images/frans.png">
+    </div>
+
+    <div class="card-body">
+      <!-- CHANGE NAME -->
+      <h4></h4>
+
+      <!-- CHANGE INFO -->
+      <p>
+        Name : Frans Naumann<br>
+        phone number : <br>
+        email :
+      </p>
+
+      <span class="badge">Chairman</span>
+    </div>
+  </article>
+
+  <!-- ========= MEMBER CARD ========= -->
+  <article class="card">
+    <div class="card-img">
+      <!-- CHANGE PHOTO -->
+      <img class="mimg" src="images/Liam.png">
+    </div>
+
+    <div class="card-body">
+      <!-- CHANGE NAME -->
+      <h4></h4>
+
+      <!-- CHANGE INFO -->
+      <p>
+        Name : Liam McCabe <br>
+        phone number : 0648891625  <br>
+        email : liammccabe2005@gmail.com
+      </p>
+
+      <span class="badge">Vice-Chairman</span>
+    </div>
+  </article>
+  <!-- ========= MEMBER CARD ========= -->
+  <article class="card">
+    <div class="card-img">
+      <!-- CHANGE PHOTO -->
+      <img class="mimg" src="images/conway.png">
+    </div>
+
+    <div class="card-body">
+      <!-- CHANGE NAME -->
+      <h4></h4>
+
+      <!-- CHANGE INFO -->
+      <p>
+        Name : Conway Griffiths <br>
+        phone number : <br>
+        email :
+      </p>
+
+      <span class="badge">secretary </span>
+    </div>
+  </article>
+  <!-- ========= MEMBER CARD ========= -->
+  <article class="card">
+    <div class="card-img">
+      <!-- CHANGE PHOTO -->
+      <img class="mimg" src="images/richard.png">
+    </div>
+
+    <div class="card-body">
+      <!-- CHANGE NAME -->
+      <h4></h4>
+
+      <!-- CHANGE INFO -->
+      <p>
+        Name : Richard Ellis <br>
+        phone number : <br>
+        email :
+      </p>
+
+      <span class="badge">Treasurer</span>
+    </div>
+  </article>
+  <!-- ========= MEMBER CARD ========= -->
+  <article class="card">
+    <div class="card-img">
+      <!-- CHANGE PHOTO -->
+      <img class="mimg" src="images/cuan.png">
+    </div>
+
+    <div class="card-body">
+      <!-- CHANGE NAME -->
+      <h4></h4>
+
+      <!-- CHANGE INFO -->
+      <p>
+        Name : Cuan Maizey <br>
+        phone number : <br>
+        email :
+      </p>
+
+      <span class="badge">IRO</span>
+    </div>
+  </article>
+  <!-- ========= MEMBER CARD ========= -->
+  <article class="card">
+    <div class="card-img">
+      <!-- CHANGE PHOTO -->
+      <img class="mimg" src="images/george.png">
+    </div>
+
+    <div class="card-body">
+      <!-- CHANGE NAME -->
+      <h4></h4>
+
+      <!-- CHANGE INFO -->
+      <p>
+        Name : George Linford <br>
+        phone number : <br>
+        email :
+      </p>
+
+      <span class="badge">PRO</span>
+    </div>
+  </article>
+  <!-- ========= MEMBER CARD ========= -->
+  <article class="card">
+    <div class="card-img">
+      <!-- CHANGE PHOTO -->
+      <img class="mimg" src="images/walter.png">
+    </div>
+
+    <div class="card-body">
+      <!-- CHANGE NAME -->
+      <h4></h4>
+
+      <!-- CHANGE INFO -->
+      <p>
+        Name : Walter Van Rooyen <br>
+        phone number : <br>
+        email :
+      </p>
+
+      <span class="badge">Joe tabler</span>
+    </div>
+  </article>
+
+  <!-- ==================================================
+       👉 TO ADD A NEW MEMBER:
+       COPY ONE CARD AND PASTE BELOW
+       CHANGE TEXT + IMAGE ONLY
+  ================================================== -->
+
+</div>
+</div>
+
+<!-- ====================================================== -->
+<script src="script.js"></script>
+
+</body>
+</html>
