@@ -179,7 +179,7 @@ function contactHTML() {
 
       <div class="li">
         <strong>Email</strong>
-        <span><a href=	roundtableboksburg17@gmail.com" style="color: var(--gold2); text-decoration:none;">	roundtableboksburg17@gmail.com</a> </span>
+        <span><a href="mailto:roundtableboksburg17@gmail.com" style="color: var(--gold2); text-decoration:none;">roundtableboksburg17@gmail.com</a></span>
       </div>
 
       <div class="li">
@@ -202,12 +202,12 @@ function socialHTML() {
 
       <div class="li">
         <strong></strong>
-        <span><a href="https://www.facebook.com/boksburg17" style="color: var(--gold2); text-decoration:none;"> facebook </a></span>
+        <span><a href="https://www.facebook.com/boksburg17" target="_blank" rel="noopener" style="color: var(--gold2); text-decoration:none;"> facebook </a></span>
       </div>
 
       <div class="li">
         <strong></strong>
-        <span><a href="https://www.instagram.com/roundtableboksburg17/" style="color: var(--gold2); text-decoration:none;">instagram</a></span>
+        <span><a href="https://www.instagram.com/roundtableboksburg17/" target="_blank" rel="noopener" style="color: var(--gold2); text-decoration:none;">instagram</a></span>
       </div>
     </div>
   `;
@@ -244,6 +244,17 @@ function galleryHTML() {
       ${galleryThumb("images/bokkie park market.jpeg", "food stall project at local crafters market")}
       ${galleryThumb("images/museum.jpeg", "Gauteng Area museum curated by boksburg 17")}
       ${galleryThumb("images/ARTSA.jpeg", "2 members acting as delegates at RTSA AGM 2025")}
+      ${galleryThumb("images/Childrens home.jpeg", "food handout at local childrens home")}
+      ${galleryThumb("images/german tabler.jpeg", "pin exchange with tabler from germany")}
+      ${galleryThumb("images/liams housesocial.jpeg","social at members house")}
+      ${galleryThumb("images/richard bannerexchange.jpeg", "banner exchange between our immediate past chairman and a tabler from germany")}
+      ${galleryThumb("images/coinexchange.jpeg","coin exchange between two boksburg 17 members")}
+      ${galleryThumb("images/richard andcuan.jpeg", "2 members of boksburg 17 ")}
+      ${galleryThumb("images/richardblooddrive.jpeg", "member donating blood")}
+      ${galleryThumb("images/R1project.jpeg", "food donated at recent canned food drive")}
+      ${galleryThumb("images/chrisandrichard.jpeg", "round table boksburg 17 member and round table northridge meeting up on a friday afternoon at our clubhouse")}
+      ${galleryThumb("images/cleanupafterevent.jpeg", "members cleaning up after event hosted at the clubhouse")}
+
     </div>
   `;
 }
@@ -255,12 +266,95 @@ function aboutHTML() {
 
       <div style="color:rgba(245,245,245,.75); line-height:1.65; font-size:14.5px;">
         <p>Round Table Boksburg 17 is a community upliftment and chairty organisation for men from the ages of 18 - 40 , first chartered in 1953 as apart of Round table Gauteng area and Round table southern africa.For over 70 years the members of round table boksburg 17 have dedicated themselves to the uppliftment of their community while cultivating an enviroment for proffesional and social growth  .</p>
-        
       </div>
 
-      
       <div class="li"><strong>How to Join</strong><span>Any man between the ages of 18 and 40 is welcome to join us at one of our monthly business meetings hosted every month on the second tuesday of the month to find out more about table and possibly look into becoming an official member.</span></div>
       <div class="li"><strong>How to Support</strong><span>keep an eye out on our socials for upcomming projects or inititaves or contact one of our members to find out more .</span></div>
+    </div>
+  `;
+}
+
+/* =========================================================
+   Portfolios = Positions in the Table (NO buttons)
+========================================================= */
+function roleCard(title, desc, person, imgSrc) {
+  return `
+    <article class="card">
+      <div class="card-img" style="height:160px;">
+        <img class="mimg" src="${imgSrc}" alt="${title}"
+          onerror="this.remove(); this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;ph&quot;>Add photo: ${imgSrc}</div>');" />
+      </div>
+
+      <div class="card-body">
+        <h4>${title}</h4>
+        <p style="margin-top:8px;">
+          
+          ${desc}
+        </p>
+        
+      </div>
+    </article>
+  `;
+}
+
+function portfoliosHTML() {
+  return `
+    <div class="section-box" style="margin-bottom:14px;">
+      <h4>Our Portfolios</h4>
+      <div style="color:rgba(245,245,245,.72); font-size:14px;">
+        Positions and responsibilities within Round Table Boksburg 17.
+      </div>
+    </div>
+
+    <div class="grid">
+      ${roleCard(
+        "Chairman",
+        "The chairman is responsible for leading the table , ensuring meetings are run well and representing the club on a larger scale within table at events such as AGM'S or council meetings  .",
+        "Frans Naumann",
+        "images/chairman logo.png"
+      )}
+
+      ${roleCard(
+        "Vice Chairman",
+        "The vice chairmans main role within table is handling anything to do with membership whether that be informing potential prospects of what table is and what we do or organising membership drives.The vice chairman may also step in to run meetings when the chairman is not present .",
+        "Liam McCabe",
+        "images/vc logo.png"
+      )}
+
+      ${roleCard(
+        "Secretary",
+        "The secratery is in charge of taking minutes at our monthly business meetings to ensure that everything said is well documented . ",
+        "Conway Griffiths",
+        "images/secratery logo.png"
+      )}
+
+      ${roleCard(
+        "Treasurer",
+        "The treasurer is in charge of making sure all funds are properly accounted for and reported to the table , they are also in charge of proccessing any incoming or outgoing payments for the table  ",
+        "Richard Ellis",
+        "images/treasurer logo.png"
+      )}
+
+      ${roleCard(
+        "International Relations Officer (IRO)",
+        "Handles international links, exchanges, and visiting tablers.",
+        "Cuan Maizey",
+        "images/IRO logo.png"
+      )}
+
+      ${roleCard(
+        "Public Relations Officer (PRO)",
+        "Manages publicity, socials, and public communications.",
+        "George Linford",
+        "images/PRO logo.png"
+      )}
+
+      ${roleCard(
+        "Clubhouse Convener",
+        "Ensures the clubhouse is always clean and ready for visitors  .",
+        "Walter Van Rooyen",
+        "images/clubhouse convener logo.png"
+      )}
     </div>
   `;
 }
@@ -303,6 +397,9 @@ function handleOpen(section) {
   if (section === "social") return openOverlay("Social Media", socialHTML());
   if (section === "gallery") return openOverlay("Gallery", galleryHTML());
   if (section === "about") return openOverlay("About", aboutHTML());
+
+  // ✅ NEW
+  if (section === "portfolios") return openOverlay("Our Portfolios", portfoliosHTML());
 
   // fallback
   openOverlay("Panel", `<div class="section-box"><div class="li"><span>Content coming soon.</span></div></div>`);
@@ -403,8 +500,47 @@ window.addEventListener("resize", () => {
   buildDots();
   scrollToPage(currentPage(), false);
 });
+/* ======================================================
+   GRAND OPENING RIBBON (plays every visit)
+====================================================== */
+
+const ribbonWrap = document.getElementById("grandOpening");
+const ribbon = ribbonWrap?.querySelector(".ribbon");
+
+if (ribbonWrap && ribbon) {
+  ribbon.addEventListener("click", () => {
+    // stop any clicks during animation
+    ribbon.style.pointerEvents = "none";
+
+    // cut animation
+    ribbon.classList.add("cut");
+
+    // confetti
+    launchConfetti();
+
+    // IMPORTANT: remove the overlay so blur cannot remain
+    setTimeout(() => {
+      ribbonWrap.remove(); // removing the element removes the blur overlay too
+    }, 650);
+  });
+}
+
+/* ===========
+   Confetti (lightweight)
+=========== */
+function launchConfetti() {
+  for (let i = 0; i < 90; i++) {
+    const conf = document.createElement("div");
+    conf.className = "confetti";
+
+    conf.style.left = Math.random() * 100 + "vw";
+    conf.style.background = `hsl(${40 + Math.random() * 20}, 80%, ${50 + Math.random() * 20}%)`;
+    conf.style.animationDuration = (2 + Math.random() * 2) + "s";
+
+    document.body.appendChild(conf);
+    setTimeout(() => conf.remove(), 4200);
+  }
+}
 
 buildDots();
 startAuto();
-
-
