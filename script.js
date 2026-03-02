@@ -179,18 +179,41 @@ function contactHTML() {
 
       <div class="li">
         <strong>Email</strong>
-        <span><a href="mailto:roundtableboksburg17@gmail.com" style="color: var(--gold2); text-decoration:none;">roundtableboksburg17@gmail.com</a></span>
+        <span>
+          <a href="mailto:roundtableboksburg17@gmail.com"
+             style="color: var(--gold2); text-decoration:none;">
+             roundtableboksburg17@gmail.com
+          </a>
+        </span>
       </div>
 
       <div class="li">
         <strong>Phone / WhatsApp</strong>
-        <span> Frans Naumann : +27 73 314 9767</span>
+        <span>Frans Naumann : +27 73 314 9767</span>
       </div>
 
       <div class="li">
         <strong>Address</strong>
         <span>32 Lancaster Rd, Parkrand, Boksburg, 1459</span>
       </div>
+
+      <!-- ✅ Google Map Embed -->
+      <div class="section-box" style="margin-top:14px;">
+        <h4>Find Us</h4>
+
+        <div style="border-radius:14px; overflow:hidden; border:1px solid rgba(212,175,55,.18);">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1789.4078898637736!2d28.253072121767897!3d-26.23517469246138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95178202c0f46f%3A0x6b1a0fcbcb7c4464!2sRound%20Table%20Boksburg%2017!5e0!3m2!1sen!2sza!4v1772486358235!5m2!1sen!2sza"
+            width="100%"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
     </div>
   `;
 }
