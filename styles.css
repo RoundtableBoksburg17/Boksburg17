@@ -649,3 +649,112 @@ body{
     right:-12px; width:24px; height:24px;
   }
 }
+
+/* =========================================================
+   ✅ NEW: Portfolios button styling inside cards
+========================================================= */
+.pactions{
+  margin-top: 12px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.pbtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(212,175,55,.28);
+  background: rgba(212,175,55,.10);
+  color: var(--text);
+  font-weight: 900;
+  font-size: 13px;
+  text-decoration: none;
+  cursor:pointer;
+  transition:.18s ease;
+}
+
+.pbtn:hover{
+  background: rgba(212,175,55,.16);
+  transform: translateY(-1px);
+}
+
+.pbtn.disabled{
+  opacity:.45;
+  cursor:not-allowed;
+  pointer-events:none;
+}
+/* ======================================================
+   GRAND OPENING RIBBON
+====================================================== */
+
+.ribbon-wrap{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:auto;
+}
+
+/* dark cinematic overlay */
+.ribbon-wrap::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  backdrop-filter:blur(6px);
+}
+
+/* ribbon */
+.ribbon{
+  position:relative;
+  width:120vw;
+  height:90px;
+
+  background:
+    linear-gradient(
+      45deg,
+      #b8962e,
+      #f2d06b,
+      #d4af37,
+      #f2d06b
+    );
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.6),
+    0 0 30px rgba(212,175,55,.5);
+
+  transform:rotate(-6deg);
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition:transform .5s ease, opacity .5s ease;
+}
+
+.ribbon-text{
+  font-weight:900;
+  letter-spacing:3px;
+  font-size:clamp(18px,3vw,34px);
+  color:#111;
+  text-shadow:0 2px 4px rgba(255,255,255,.4);
+}
+
+/* cut animation */
+.ribbon.cut{
+  transform:rotate(-6deg) scaleX(0);
+  opacity:0;
+}
+
+/* hide entire overlay */
+.ribbon-wrap.hide{
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .6s ease;
+}
