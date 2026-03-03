@@ -118,12 +118,6 @@ document.addEventListener("keydown", (e) => {
 
 /* ===========
    Members (NO arrays, NO JS-generated cards)
-
-   ✅ Where to edit member cards:
-   - In index.html, inside:
-     <div id="membersContent" style="display:none;"> ... </div>
-
-   You can add/remove/reorder cards there by copy/paste.
 =========== */
 function getMembersHTML() {
   const el = $("#membersContent");
@@ -135,11 +129,11 @@ function getMembersHTML() {
       </div>
     `;
   }
-  return el.innerHTML; // directly reuse the HTML you maintain
+  return el.innerHTML;
 }
 
 /* ===========
-   Other sections (simple templates)
+   Other sections
 =========== */
 function projectsHTML() {
   return `
@@ -163,10 +157,8 @@ function projectsHTML() {
         <div class="li">
           <strong>Winter Knight blanket and food drive</strong>
           <span>Status:• Ongoing </span>•
-          
           <span>every winter season boksburg 17 sets out to collect blankets,food and clothes for the less fortunate.</span>
         </div>
-       
       </div>
     </div>
   `;
@@ -213,7 +205,6 @@ function contactHTML() {
           </iframe>
         </div>
       </div>
-
     </div>
   `;
 }
@@ -224,14 +215,35 @@ function socialHTML() {
       <h4>Social Media</h4>
 
       <div class="li">
-        <strong></strong>
-        <span><a href="https://www.facebook.com/boksburg17" target="_blank" rel="noopener" style="color: var(--gold2); text-decoration:none;"> facebook </a></span>
+        <span><a href="https://www.facebook.com/boksburg17" target="_blank" rel="noopener" style="color: var(--gold2); text-decoration:none;">facebook</a></span>
       </div>
 
       <div class="li">
-        <strong></strong>
         <span><a href="https://www.instagram.com/roundtableboksburg17/" target="_blank" rel="noopener" style="color: var(--gold2); text-decoration:none;">instagram</a></span>
       </div>
+    </div>
+  `;
+}
+
+/* ===========
+   Calendar (Google Calendar embed)
+=========== */
+function calendarHTML() {
+  return `
+    <div class="section-box" style="margin-bottom:14px;">
+      <h4>Calendar</h4>
+      <div style="color:rgba(245,245,245,.72); font-size:14px;">
+        Upcoming meetings, projects, and events.
+      </div>
+    </div>
+
+    <div class="embed">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=afa47fbbd74f69da3650302e274932893ddde0cad37599defbabb548484b7e0c%40group.calendar.google.com&ctz=Africa%2FJohannesburg"
+        loading="lazy"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
     </div>
   `;
 }
@@ -253,7 +265,6 @@ function galleryThumb(src, caption) {
 }
 
 function galleryHTML() {
-  // No array — just add/remove lines here if you want.
   return `
     <div class="section-box" style="margin-bottom:14px;">
       <h4>Gallery</h4>
@@ -277,7 +288,6 @@ function galleryHTML() {
       ${galleryThumb("images/R1project.jpeg", "food donated at recent canned food drive")}
       ${galleryThumb("images/chrisandrichard.jpeg", "round table boksburg 17 member and round table northridge meeting up on a friday afternoon at our clubhouse")}
       ${galleryThumb("images/cleanupafterevent.jpeg", "members cleaning up after event hosted at the clubhouse")}
-
     </div>
   `;
 }
@@ -298,23 +308,21 @@ function aboutHTML() {
 }
 
 /* =========================================================
-   Portfolios = Positions in the Table (NO buttons)
+   Portfolios = Logos + badge bottom-left + description
 ========================================================= */
-function roleCard(title, desc, person, imgSrc) {
+function roleCard(title, desc, imgSrc) {
   return `
     <article class="card">
-      <div class="card-img" style="height:160px;">
-        <img class="mimg" src="${imgSrc}" alt="${title}"
-          onerror="this.remove(); this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;ph&quot;>Add photo: ${imgSrc}</div>');" />
+      <div class="card-img" style="height:180px; position:relative;">
+        <img class="gimg" src="${imgSrc}" alt="${title}"
+          onerror="this.remove(); this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;ph&quot;>Add logo: ${imgSrc}</div>');" />
+
+        <!-- badge bottom-left -->
+        <span class="badge portfolio-badge">${title}</span>
       </div>
 
       <div class="card-body">
-        <h4>${title}</h4>
-        <p style="margin-top:8px;">
-          
-          ${desc}
-        </p>
-        
+        <p>${desc}</p>
       </div>
     </article>
   `;
@@ -333,49 +341,42 @@ function portfoliosHTML() {
       ${roleCard(
         "Chairman",
         "The chairman is responsible for leading the table , ensuring meetings are run well and representing the club on a larger scale within table at events such as AGM'S or council meetings  .",
-        "Frans Naumann",
         "images/chairman logo.png"
       )}
 
       ${roleCard(
         "Vice Chairman",
         "The vice chairmans main role within table is handling anything to do with membership whether that be informing potential prospects of what table is and what we do or organising membership drives.The vice chairman may also step in to run meetings when the chairman is not present .",
-        "Liam McCabe",
         "images/vc logo.png"
       )}
 
       ${roleCard(
         "Secretary",
-        "The secratery is in charge of taking minutes at our monthly business meetings to ensure that everything said is well documented . ",
-        "Conway Griffiths",
+        "The secratery is in charge of taking minutes at our monthly business meetings to ensure that everything said is well documented .",
         "images/secratery logo.png"
       )}
 
       ${roleCard(
         "Treasurer",
-        "The treasurer is in charge of making sure all funds are properly accounted for and reported to the table , they are also in charge of proccessing any incoming or outgoing payments for the table  ",
-        "Richard Ellis",
+        "The treasurer is in charge of making sure all funds are properly accounted for and reported to the table , they are also in charge of proccessing any incoming or outgoing payments for the table.",
         "images/treasurer logo.png"
       )}
 
       ${roleCard(
         "International Relations Officer (IRO)",
         "Handles international links, exchanges, and visiting tablers.",
-        "Cuan Maizey",
         "images/IRO logo.png"
       )}
 
       ${roleCard(
         "Public Relations Officer (PRO)",
         "Manages publicity, socials, and public communications.",
-        "George Linford",
         "images/PRO logo.png"
       )}
 
       ${roleCard(
         "Clubhouse Convener",
-        "Ensures the clubhouse is always clean and ready for visitors  .",
-        "Walter Van Rooyen",
+        "Ensures the clubhouse is always clean and ready for visitors.",
         "images/clubhouse convener logo.png"
       )}
     </div>
@@ -388,13 +389,10 @@ function portfoliosHTML() {
 function bindPanelImageLightbox() {
   if (!panelBody) return;
 
-  // Any image you want clickable in overlays: add class="gimg"
   $$(".gimg", panelBody).forEach(img => {
     img.addEventListener("click", () => openLightbox(img.src, img.alt));
   });
 
-  // Also make member images clickable if you want:
-  // add class="mimg" to member <img> tags in #membersContent
   $$(".mimg", panelBody).forEach(img => {
     img.addEventListener("click", () => openLightbox(img.src, img.alt));
   });
@@ -413,18 +411,17 @@ function handleOpen(section) {
   $$(".crumb").forEach(c => c.classList.remove("active"));
   $(`.crumb[data-open="${section}"]`)?.classList.add("active");
 
-  // Open the correct overlay
   if (section === "members") return openOverlay("Members", getMembersHTML());
   if (section === "projects") return openOverlay("Projects", projectsHTML());
   if (section === "contact") return openOverlay("Contact", contactHTML());
   if (section === "social") return openOverlay("Social Media", socialHTML());
   if (section === "gallery") return openOverlay("Gallery", galleryHTML());
   if (section === "about") return openOverlay("About", aboutHTML());
-
-  // ✅ NEW
   if (section === "portfolios") return openOverlay("Our Portfolios", portfoliosHTML());
 
-  // fallback
+  /* ✅ NEW */
+  if (section === "calendar") return openOverlay("Calendar", calendarHTML());
+
   openOverlay("Panel", `<div class="section-box"><div class="li"><span>Content coming soon.</span></div></div>`);
 }
 
@@ -511,7 +508,6 @@ if (viewport) {
 
   viewport.addEventListener("scroll", () => setActiveDot(currentPage()), { passive: true });
 
-  // click tiles to open lightbox
   $$(".tile", viewport).forEach(btn => {
     const img = $("img", btn);
     if (!img) return;
@@ -523,34 +519,26 @@ window.addEventListener("resize", () => {
   buildDots();
   scrollToPage(currentPage(), false);
 });
+
 /* ======================================================
    GRAND OPENING RIBBON (plays every visit)
 ====================================================== */
-
 const ribbonWrap = document.getElementById("grandOpening");
 const ribbon = ribbonWrap?.querySelector(".ribbon");
 
 if (ribbonWrap && ribbon) {
   ribbon.addEventListener("click", () => {
-    // stop any clicks during animation
     ribbon.style.pointerEvents = "none";
-
-    // cut animation
     ribbon.classList.add("cut");
-
-    // confetti
     launchConfetti();
 
-    // IMPORTANT: remove the overlay so blur cannot remain
     setTimeout(() => {
-      ribbonWrap.remove(); // removing the element removes the blur overlay too
+      ribbonWrap.remove();
     }, 650);
   });
 }
 
-/* ===========
-   Confetti (lightweight)
-=========== */
+/* Confetti */
 function launchConfetti() {
   for (let i = 0; i < 90; i++) {
     const conf = document.createElement("div");
