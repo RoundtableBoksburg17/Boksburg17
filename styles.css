@@ -758,3 +758,17 @@ body{
   pointer-events:none;
   transition:opacity .6s ease;
 }
+/* Google Calendar embed wrapper */
+.embed{
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(212,175,55,.18);
+  background: rgba(0,0,0,.25);
+}
+
+.embed iframe{
+  width: 100%;
+  height: min(70vh, 720px);
+  border: 0;
+  display: block;
+}
